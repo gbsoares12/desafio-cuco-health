@@ -9,13 +9,11 @@ class CustomCircleAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipOval(
       child: Container(
-        height: 150,
-        width: 150,
+        constraints: BoxConstraints(
+            minHeight: 80, minWidth: 80, maxHeight: 150, maxWidth: 150),
         color: Colors.grey.shade200,
         child: Image.network(
           this.photoUrl,
-          width: 150.0,
-          height: 150.0,
           fit: BoxFit.contain,
         ),
       ),
